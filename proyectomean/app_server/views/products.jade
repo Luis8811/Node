@@ -1,0 +1,23 @@
+extends layout
+
+include _includes/sharedHTMLfunctions
+
+block content
+ br
+ br
+ h1 Dulcelandia
+ h2 Nuestros productos
+  #banner.page-header
+  .row
+    .col-xs-12.col-sm-8
+      .row.list-group
+        each product in products
+          .col-xs-12.list-group-item
+            h4
+              a(href="/administration")= product.description
+              small &nbsp;
+            p  Desde #{product.price} euros
+            p Ofertas: 
+              each flavor in product.flavors
+                span.label.label-warning= flavor
+                &nbsp;
