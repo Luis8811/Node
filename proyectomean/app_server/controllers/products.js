@@ -4,3 +4,7 @@ module.exports.products = function(req, res){
     {description: 'helados', price: '2,50', flavors: ['Iglú', 'Mix', 'Bajo en calorías']},
     {description: 'bollería', price: '1,10', flavors: ['Magdalena', 'Palmeras', 'Croissants']}]});
 };
+
+module.exports.product_detail = function(req, res){
+    res.render('product_detail',{description:'', price:'', flavors:[]});
+};
